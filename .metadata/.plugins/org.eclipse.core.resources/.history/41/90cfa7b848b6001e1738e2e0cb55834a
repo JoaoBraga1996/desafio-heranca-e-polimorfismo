@@ -1,0 +1,21 @@
+package educ360;
+
+public class AFsf {
+
+	public static void main(String[] args) {
+		int numero = 5;
+		boolean resultado = ehPositivo(numero);
+
+		if (resultado) {
+			System.out.println("O número é positivo.");
+		} else {
+			System.out.println("O número é negativo.");
+		}
+	}
+
+	public static boolean ehPositivo(int numero) {
+		return numero >= 0;
+
+	}
+
+}

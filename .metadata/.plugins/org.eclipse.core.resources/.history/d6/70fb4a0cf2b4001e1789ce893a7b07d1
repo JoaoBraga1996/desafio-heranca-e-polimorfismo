@@ -1,0 +1,44 @@
+package educ360;
+
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		Tarefa taf1 = new Tarefa();
+		taf1.setNome("Lavar louça");
+
+		Tarefa taf2 = new Tarefa();
+		taf2.setNome("varrear a casa");
+
+		Tarefa taf3 = new Tarefa();
+		taf3.setNome("ir estudar Java no melhor BOOTCAMP DO BRASIL !");
+
+		ControladorDeTarefa controlador = new ControladorDeTarefa();
+		controlador.adicionar(taf1);
+		controlador.adicionar(taf2);
+		controlador.adicionar(taf3);
+
+		System.out.println(controlador.listarTarefa());
+
+		controlador.listarTarefaPorOrdemAlfabetica().forEach((e) -> System.out.println(e));
+
+		System.out.println("Você realmente dessa remover uma lista?   s/n ");
+		char resposta = sc.nextLine().charAt(0);
+		if (resposta == 's') {
+			controlador.remover(taf3);
+		}
+
+		else {
+			System.out.println("nenhuma lista sera removida !");
+		}
+
+		System.out.println(controlador.listarTarefa());
+
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,39 @@
+package educ360;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import educ360.entidades.Ebook;
+import educ360.entidades.Livro;
+import educ360.unitarias.CarrinhoDeCompras;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		Ebook ebook1 = new Ebook();
+		ebook1.setAutor("Felipe");
+		ebook1.setIsbn("2");
+		ebook1.setTamanhoEmMb(5.0);
+		ebook1.setPreco(100.0);
+		ebook1.setTitulo("Vida Do João De Arceburgo-mg");
+
+		Ebook ebook2 = new Ebook();
+		ebook2.setAutor("Braga");
+		ebook2.setIsbn("3");
+		ebook2.setTamanhoEmMb(.0);
+		ebook2.setPreco(100.0);
+		ebook2.setTitulo("Vida Do João De Arceburgo-mg");
+
+		List<Livro> livros = new ArrayList<>();
+		livros.add(ebook1);
+		livros.add(ebook2);
+
+		CarrinhoDeCompras carrinhoDeCompra = new CarrinhoDeCompras();
+		carrinhoDeCompra.setListaLivros(livros);
+
+		System.out.println(carrinhoDeCompra.CalcularTotal());
+
+	}
+
+}

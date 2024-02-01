@@ -1,0 +1,29 @@
+package educ360.unitarias;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import educ360.entidades.Livro;
+
+public class CarrinhoDeCompras {
+
+	private List<Livro> listaLivros = new ArrayList<>();
+
+	public CarrinhoDeCompras() {
+	}
+
+	public List<Livro> getListaLivros() {
+		return listaLivros;
+	}
+
+	public double CalcularTotal(Livro livro) {
+		double soma = 0;
+		for (int i = 0; i < listaLivros.size(); i++) {
+			soma += livro.calcularPrecoTotal(livro);
+
+		}
+
+		return soma;
+	}
+
+}

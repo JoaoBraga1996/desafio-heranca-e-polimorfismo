@@ -1,0 +1,10 @@
+package educ360;
+
+public class tarefa {
+	
+	private Long id;
+	private String nome;
+	
+	
+
+}

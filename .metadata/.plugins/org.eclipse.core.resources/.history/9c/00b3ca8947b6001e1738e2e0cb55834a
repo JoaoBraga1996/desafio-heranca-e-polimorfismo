@@ -1,0 +1,26 @@
+package educ360;
+
+import java.util.Scanner;
+
+public class NegativoPositivo {
+	public static void main(String[] args) {
+		int numero;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Digite um numero pra saber se é positivo ou negativo");
+		numero = sc.nextInt();
+
+		boolean numeroNegativo = numero < 0;
+
+		if (numeroNegativo) {
+			System.out.println("negativo");
+
+		} else {
+			System.out.println("postivio");
+		}
+
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package educ360;
+
+import java.util.Random;
+
+public class ProgramaTeste {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		int gerador = random.nextInt(100);
+		
+		System.out.println(gerador);
+
+	}
+
+}

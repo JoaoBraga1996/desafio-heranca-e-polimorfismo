@@ -1,0 +1,10 @@
+package educ360;
+
+public class Tarefa {
+	
+	private Long id;
+	private String nome;
+	
+	
+
+}

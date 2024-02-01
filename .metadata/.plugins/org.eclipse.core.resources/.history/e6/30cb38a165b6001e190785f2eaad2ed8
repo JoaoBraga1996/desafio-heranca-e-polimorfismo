@@ -1,0 +1,29 @@
+package educ360;
+
+import educ360.entidades.LivroFisico;
+import educ360.unitarias.CarrinhoDeCompras;
+
+public class Programa {
+	
+	public static void main(String[] args) {
+		
+		LivroFisico livroFisico = new LivroFisico();
+		livroFisico.setAutor("João");
+		livroFisico.setFrete(10.0);
+		livroFisico.setIsbn("1");
+		livroFisico.setPeso(2.0);
+		livroFisico.setPreco(100.0);
+		livroFisico.setTitulo("Vida Do João De Arceburgo-mg");
+		
+		CarrinhoDeCompras carrinhoDeCompras = new CarrinhoDeCompras();
+		double precoTotal = carrinhoDeCompras.CalcularTotal(livroFisico);
+		
+		System.out.println(precoTotal);
+		
+			
+			
+		}
+		
+		
+		
+}

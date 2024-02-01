@@ -1,0 +1,23 @@
+package educ360;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ControladorDeTarefa {
+
+	List<Tarefa> tarefas = new ArrayList<>();
+
+	public ControladorDeTarefa() {
+	}
+
+	public List<Tarefa> getTarefas() {
+		return tarefas;
+	}
+
+	public void adicionar(Tarefa tarefa) {
+		if (!tarefas.contains(tarefa))
+			tarefas.add(tarefa);
+			;
+	}
+
+}

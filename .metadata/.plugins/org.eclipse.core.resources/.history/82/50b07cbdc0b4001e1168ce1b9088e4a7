@@ -1,0 +1,26 @@
+package educ360;
+
+public class Calculadora {
+
+	public static int calcularSoma(int numero1, int numero2) {
+		return numero1 + numero2;
+	}
+
+	public static int calcularSubtracao(int numero1, int numero2) {
+		return numero1 - numero2;
+	}
+
+	public static int calcularMultiplicacao(int numero1, int numero2) {
+		return numero1 * numero2;
+	}
+
+	public static double calcularDivisao(int numero1, int numero2) {
+		if (numero2 == 0) {
+			throw new ArithmeticException("Divisão por ZERO não é permitido");
+		}
+
+		return numero1 / numero2;
+
+	}
+
+}

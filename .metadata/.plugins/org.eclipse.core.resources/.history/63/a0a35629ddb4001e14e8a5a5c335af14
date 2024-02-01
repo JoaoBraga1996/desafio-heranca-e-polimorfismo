@@ -1,0 +1,40 @@
+package educ360;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Tarefa taf1 = new Tarefa();
+		taf1.setNome("lavar louça");
+
+		Tarefa taf2 = new Tarefa();
+		taf2.setNome("Varrear a casa");
+
+		Tarefa taf3 = new Tarefa();
+		taf3.setNome("limpar banheiro");
+
+		List<Tarefa> tarefas = new ArrayList<>();
+
+		if (!tarefas.contains(taf1)) {
+			tarefas.add(taf1);
+		}
+
+		if (!tarefas.contains(taf2)) {
+			tarefas.add(taf2);
+		}
+
+		if (!tarefas.contains(taf3)) {
+			tarefas.add(taf3);
+		}
+		
+		if (!tarefas.contains(taf3)) {
+			tarefas.add(taf3);
+		}
+
+		System.out.println(tarefas.toString());
+
+	}
+
+}

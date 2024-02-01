@@ -1,0 +1,51 @@
+package educ360;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import educ360.entidades.Ebook;
+import educ360.entidades.Livro;
+import educ360.entidades.LivroFisico;
+import educ360.unitarias.CarrinhoDeCompras;
+
+public class Programa {
+
+	public static void main(String[] args) {
+
+		LivroFisico livroFisico = new LivroFisico();
+		livroFisico.setAutor("João");
+		livroFisico.setFrete(10.0);
+		livroFisico.setIsbn("1");
+		livroFisico.setPeso(2.0);
+		livroFisico.setPreco(100.0);
+		livroFisico.setTitulo("Vida Do João De Arceburgo-mg");
+
+		LivroFisico livroFisico1 = new LivroFisico();
+		livroFisico1.setAutor("João");
+		livroFisico1.setFrete(10.0);
+		livroFisico1.setIsbn("1");
+		livroFisico1.setPeso(2.0);
+		livroFisico1.setPreco(100.0);
+		livroFisico1.setTitulo("Vida Do João De Arceburgo-mg");
+
+		LivroFisico livroFisico2 = new LivroFisico();
+		livroFisico2.setAutor("João");
+		livroFisico2.setFrete(10.0);
+		livroFisico2.setIsbn("1");
+		livroFisico2.setPeso(2.0);
+		livroFisico2.setPreco(100.0);
+		livroFisico2.setTitulo("Vida Do João De Arceburgo-mg");
+
+		List<Livro> livros = new ArrayList<>();
+		livros.add(livroFisico);
+		livros.add(livroFisico2);
+		livros.add(livroFisico2);
+
+		CarrinhoDeCompras carrinhoDeCompra = new CarrinhoDeCompras();
+		carrinhoDeCompra.setListaLivros(livros);
+
+		System.out.println(carrinhoDeCompra.CalcularTotal());
+
+	}
+
+}

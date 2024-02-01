@@ -1,0 +1,35 @@
+package educ360;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class vzxvz {
+	
+	 public static void jogarJogo() {
+	        Random random = new Random();
+	        int numeroAdivinhado = random.nextInt(101); // Gera um número aleatório entre 0 (inclusive) e 101 (exclusive)
+	        Scanner scanner = new Scanner(System.in);
+	        int tentativa;
+	        
+	        System.out.println("Bem-vindo ao jogo de adivinhação!");
+
+	        System.out.print("Digite um palpite (entre 0 e 100): ");
+	        tentativa = scanner.nextInt();
+
+	        while (tentativa != numeroAdivinhado) {
+	            if (tentativa < 0 || tentativa > 100) {
+	                System.out.println("Por favor, digite um número entre 0 e 100.");
+	            } else if (tentativa < numeroAdivinhado) {
+	                System.out.println("Tente novamente! O número é maior.");
+	            } else if (tentativa > numeroAdivinhado) {
+	                System.out.println("Tente novamente! O número é menor.");
+	            }
+
+	            System.out.print("Digite um palpite (entre 0 e 100): ");
+	            tentativa = scanner.nextInt();
+	        }
+
+	        System.out.println("Parabéns! Você adivinhou o número corretamente: " + numeroAdivinhado);
+	        scanner.close();
+
+}
